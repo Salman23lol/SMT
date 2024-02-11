@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* DarkModeSwitch.module.css */
+
+
+
+.hoverEffect {
+  position: relative; /* Required for absolute positioning of pseudo-element */
+}
+
+.hoverEffect::after {
+  content: ''; /* Create pseudo-element */
+  position: absolute; /* Position it absolutely relative to .hoverEffect */
+  bottom: 0; /* Position at the bottom of the text */
+  left: 0; /* Initially align to the left */
+  width: 0; /* Start with no width */
+  height: 1px; /* Thickness of the border */
+  background-color: rgb(172, 172, 172); /* Color of the border */
+  transition: width 0.3s; /* Transition for width */
+}
+
+.hoverEffect:hover::after {
+  width: 100%; /* Expand width to 100% on hover */
+}
+
+
+
+*{
+  font-family: 'Quicksand';
+  transition: 0.1s;
+}
+
+.primary-text-btn{
+  @apply cursor-pointer font-medium text-[13px] md:text-base hoverEffect p-1
+}
+
+
+
+
+
+
+
+.customScrollbar::-webkit-scrollbar {
+  width: 10px;
+ height: 8px;
+ border-radius: 1000px;
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+  background: #68686800;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
+
+
+.customScrollbarY::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 1000px;
+ }
+ 
+ .customScrollbarY::-webkit-scrollbar-track {
+   background: #68686800;
+ }
+ 
+ .customScrollbarY::-webkit-scrollbar-thumb {
+   background: #888;
+ }
+ 
+ .customScrollbarY::-webkit-scrollbar-thumb:hover {
+   background: #555;
+ }
+
+
